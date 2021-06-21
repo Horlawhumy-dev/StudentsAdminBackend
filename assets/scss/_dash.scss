@@ -1,0 +1,79 @@
+.slow{
+    transition: all 2s ease;
+}
+.dash-close{
+    transform: translateY(-1000%);
+    transition: transform 3s ease;
+}
+
+
+.container-dash{
+    background-color: $tertiary-color;
+    border-radius: 10px;
+    width: 45%;
+    height: 75vh;
+    margin: 2rem auto;
+    padding: 0rem 3rem;
+    position: absolute;
+    top: 5rem;
+    right: 10rem;
+    left: 10rem;
+    bottom: 5rem;
+    z-index: 10;
+    
+    .img{
+        text-align: center;
+        img{
+            border-radius: 50%;
+            margin: 2rem auto;
+            width:140px;
+            height:200px;
+        }
+     
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 10px;
+        .profile{
+            background-color: $secondary-color;
+            text-align: justify;
+            margin-top: 0rem;
+            padding: .5rem 1rem;
+            border-radius: 10px;
+            text-align: center;
+            Label{
+               
+                color: $primary-color;
+            }
+        }
+        .address{
+            grid-column: 2/4;
+            grid-row: 2;
+        }
+    }
+
+    .btn-close{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        button{
+            color: $primary-color;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            padding: 5px 10px;
+            font-size: larger;
+            cursor: pointer;
+            border: none;
+            &:active{
+                transform: translateY(-20px);
+                transition: all 250ms ease-in;
+            }
+        }
+    }
+    
+   
+    
+}

@@ -1,0 +1,62 @@
+.nav{
+    @include center;
+    background-color: $primary-color;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: $tertiary-color;
+}
+
+.container-form{
+    background-color: black;
+    width: 50%;
+    margin: 5rem auto;
+    padding: 2rem 0;
+    form{
+        margin: 2rem;
+        .form-control{
+            margin: 2rem 1rem;
+            Label{
+                color: $primary-color;
+                font-size: larger;
+            }
+
+            input{
+                background-color: transparent;
+                border: 1px solid $tertiary-color;
+                padding: 1rem;
+                color: $tertiary-color;
+                font-size: large;
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            select {
+                background-color: lightgrey;
+                color: $primary-color;
+               width: 100%;
+               padding: 1rem;
+            }
+        }
+
+        button{
+            background-color: $primary-color;
+            color: $tertiary-color;
+            border-radius: 10px;
+            border: none;
+            padding:  1rem 2rem;
+            font-size: larger;
+            font-weight: 700;
+            cursor: pointer;
+            outline:none;
+            margin-left: 3rem;
+            margin-right: 3rem;
+            width: 80%;
+            text-align: center;
+
+            &:active{
+                background-color: red;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,40 @@
+table{
+    thead{
+        tr{
+            width: 80%;
+            margin: 5rem;
+            color: $primary-color;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 10px;
+            padding: 10px;
+        }
+    }
+
+    tbody {
+        tr {
+            background-color: $tertiary-color;
+            td{
+                font-size: large;
+                padding: 10px;
+                margin: 0 10px;
+                text-align: center;
+
+                & button{
+                    background-color: $primary-color;
+                    color: $tertiary-color;
+                    border: none;
+                    outline: none;
+                    padding:  10px 1rem;
+                    font-size: large;
+                    &:hover{
+                        text-decoration: underline;
+                        color: red;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+   
+}

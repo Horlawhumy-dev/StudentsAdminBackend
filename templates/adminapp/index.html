@@ -1,0 +1,134 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% block title %}Students Administration Dashboard{% endblock %}
+
+{% block content %}
+    <!-- Navigation -->
+    <nav class="nav">Students Administration Dashboard</nav>
+
+    <!-- Main -->
+    <main class="main">
+        <div class="container">
+            <div class="link">
+                <a href="{% url 'form:studentsform'%}">Add Student</a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Name</th>
+                        <th>Reg No</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Status</th>
+                        <th>Profile</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <hr>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Arafat Olayiwola</td>
+                        <td>CSC/2018/130</td>
+                        <td>olawumiarafat@gmail.com</td>
+                        <td>No 6 Omole Estate</td>
+                        <td>UG</td>
+                        <td>
+                            <button id="full-profile">Profile</button>
+                        </td>
+                        <td>
+                            <form action="#" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <hr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Arafat Olayiwola</td>
+                        <td>CSC/2018/130</td>
+                        <td>olawumiarafat@gmail.com</td>
+                        <td>No 6 Omole Estate</td>
+                        <td>UG</td>
+                        <td>
+                            <button id="full-profile">Profile</button>
+                        </td>
+                        <td>
+                            <form action="#">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <hr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Arafat Olayiwola</td>
+                        <td>CSC/2018/130</td>
+                        <td>olawumiarafat@gmail.com</td>
+                        <td>No 6 Omole Estate</td>
+                        <td>UG</td>
+                        <td>
+                            <button id="full-profile">Profile</button>
+                        </td>
+                        <td>
+                            <form action="#">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <hr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- Student Dashboard -->
+    <div class="container-dash dash-close" id="dash">
+        <div class="btn-close">
+            <button id="close">X</button>
+        </div>
+        <div class="img">
+            <img src="images/arafat.jpg" alt="Profile Picture">          
+        </div>
+        <div class="grid">
+            <div class="profile">
+                <Label>FirstName: ARAFAT</Label>
+            </div>
+            <div class="profile">
+                <Label>LastName: Olayiwola</Label>
+            </div>
+            <div class="profile">
+                <Label>Sex: Male</Label>
+            </div>
+            <div class="profile">
+                <Label>Reg No: CSC/2018/199</Label>
+            </div>
+            <div class="profile">
+                <Label>Email: olawumiarafat</Label>
+            </div>
+            <div class="profile">
+                <Label>DOB: 17/09/1997</Label>
+            </div>
+            <div class="profile address">
+                <Label>Address: No6 Omole Estate Ile-Ife</Label>
+            </div>
+            <div class="profile">
+                <Label>Phone: +2348029733525</Label>
+            </div>
+            <div class="profile">
+                <Label>Status: Undergraduate</Label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="copyright">
+            Copyright &copy HaroffCode 2021. 
+        </div>
+    </footer>
+
+     <!-- JavaScript -->
+    <script src="{% static 'js/app.js' %}"></script>
+{% endblock %}

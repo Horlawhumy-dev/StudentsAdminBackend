@@ -1,0 +1,74 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% block title %}Students Form Profile{% endblock %}
+
+{% block content %}
+    <nav class="nav"> 
+        <h1>Student Profile Form</h1>
+        <a href="{% url 'adminapp:index' %}">Admin</a>
+    </nav>
+    <div class="container-form">
+        <form action="{% url 'form:studentsform' %}" id="form" method="POST" enctype="multipart/form-data" autocomplete="off">
+            {% csrf_token %}
+            <div class="form-control">
+                <Label for="firstname">FirstName: </Label>
+                <input type="text" name="firstname" placeholder="Ex: Arafat">
+            </div>
+            <div class="form-control">
+                <Label for="lastname">LastName: </Label>
+                <input type="text" name="lastname" placeholder="Ex: Olayiwola">
+            </div>
+            <div class="form-control">
+                <Label for="dob">Date Of Birth: </Label>
+                <input type="text" name="dob" placeholder="Ex: dd/mm/year">
+            </div>
+            <div class="form-control">
+                <Label for="regno">RegNo: </Label>
+                <input type="text" name="regno" placeholder="Ex: CSC/2018/059">
+            </div>
+            <div class="form-control">
+                <Label for="email">Email: </Label>
+                <input type="email" name="email" placeholder="Ex: text123@text.com">
+            </div>
+            <div class="form-control">
+                <Label for="address">Address: </Label>
+                <input type="text" name="address" placeholder="Ex: No. 006 Omole Esate Ile-Ife">
+            </div>
+            <div class="form-control">
+                <Label for="phone">Phone No: </Label>
+                <input type="text" name="phone" placeholder="Ex: +2348029....">
+            </div>
+            <div class="form-control">
+                <Label for="img">Choose Image: </Label>
+                <input type="file" name="img">
+            </div>
+            <div class="form-control">
+                <Label for="sex">Select Sex: </Label>
+                <select name="sex">
+                        <option value="">Choose Sex</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <Label for="status">Select Status: </Label>
+                <select name="status">
+                    <option value="">Choose Status</option>
+                    <option value="UG">Undergraduate</option>
+                    <option value="PG">Postgraduate</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="copyright">
+            Copyright &copy HaroffCode 2021. 
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/form.js' %}"></script>
+{% endblock %}
