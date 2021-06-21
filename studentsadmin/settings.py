@@ -30,7 +30,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'adminapp',
-    'form'
+    'form',
+    'studentsapi'
 ]
 
 MIDDLEWARE = [
