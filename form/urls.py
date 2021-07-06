@@ -5,5 +5,5 @@ from . import views
 
 app_name = 'form'
 urlpatterns = [
-    path('form/', views.Form, name="studentsform")
+    path('', views.Form, name="studentsform")
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

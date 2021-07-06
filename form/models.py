@@ -2,14 +2,14 @@ from django.db import models
 
 class StudentForm(models.Model):
     class Sex(models.TextChoices):
-        sex = 'CS', 'Choose sex'
-        Male = 'M', 'male'
-        Female = 'F', 'female'
+        sex = ('CS', 'Choose sex')
+        Male = ('M', 'male')
+        Female = ('F', 'female')
         
     class Status(models.TextChoices):
-        status = 'CS', 'Choose Status'
-        UNDERGRADUATE = 'UG', 'undergraduate'
-        POSTGRADUATE = 'PG', 'postgraduate'
+        status = ('CS', 'Choose Status')
+        UNDERGRADUATE = ('UG', 'undergraduate')
+        POSTGRADUATE = ('PG', 'postgraduate')
 
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)

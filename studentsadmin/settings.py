@@ -1,5 +1,6 @@
 import os
-# from dotenv import load_dotenv
+import psycopg2
+import dj_database_url
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
 
@@ -31,8 +32,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'adminapp',
-    'form',
-    'studentsapi'
+    'studentsapi',
+    'form'
 ]
 
 MIDDLEWARE = [
@@ -63,6 +64,10 @@ TEMPLATES = [
         },
     },
 ]
+# DATABASE_URL = os.environ['DATABASE_URL']
+
+# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
 
 WSGI_APPLICATION = 'studentsadmin.wsgi.application'
 
@@ -81,6 +86,9 @@ DATABASES = {
     }
 }
 
+
+
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -128,3 +136,8 @@ STATIC_ROOT = '/assets/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5500"
+]
+
